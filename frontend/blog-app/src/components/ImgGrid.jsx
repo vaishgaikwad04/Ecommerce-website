@@ -84,7 +84,7 @@ const EpisodeGrid = () => {
       {row.map((ep, index) => (
         <div
           key={index}
-          className="flex-shrink-0 w-64 md:w-72 rounded-xl overflow-hidden relative group cursor-pointer"
+          className="flex-shrink-0 w-64 md:w-74 rounded-xl overflow-hidden relative group cursor-pointer"
         >
           <img
             src={ep.img}

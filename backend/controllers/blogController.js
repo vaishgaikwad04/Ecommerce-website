@@ -84,3 +84,33 @@ export const getBlogsByType = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+// 🔍 Search Blogs Controller (fixed)
+export const searchBlogs = async (req, res) => {
+  try {
+    const query = req.query.q;
+
+    if (!query || query.trim() === "") {
+      return res.status(400).json({ message: "Search query is required" });
+    }
+
+    // Search by title, type, or content
+    const blogs = await Blog.find({
+      $or: [
+        { title: { $regex: query, $options: "i" } },
+        { type: { $regex: query, $options: "i" } },  // ✅ replaced category with type
+        { content: { $regex: query, $options: "i" } },
+      ],
+    });
+
+    if (blogs.length === 0) {
+      return res.status(404).json({ message: "No blogs found" });
+    }
+
+    res.status(200).json(blogs);
+  } catch (error) {
+    console.error("Search error:", error.message);
+    res.status(500).json({ message: "Server error" });
+  }
+};
+

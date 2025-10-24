@@ -39,7 +39,7 @@ export default function Read() {
     <div className="px-20 py-16 bg-[#F9F6F2] min-h-screen">
       {/* Heading */}
       <h1
-        className="mb-10 text-left mx-8 mt-6 font-bold text-5xl tracking-wide"
+        className="mb-10 text-left mx-8 mt-6 font-bold text-4xl tracking-wide"
         style={{ color: "var(--color-dark-blue)" }}
       >
         RECENT POSTS
@@ -84,7 +84,7 @@ export default function Read() {
 
                   {/* Content */}
                   <div className="w-1/2 p-10 flex flex-col">
-                    <h2 className="text-3xl font-bold text-[#0b3050] mb-4 leading-snug">
+                    <h2 className="text-2xl font-bold text-[#0b3050] mb-4 leading-snug">
                       {blog.title}
                     </h2>
                     <p className="text-gray-600 text-lg mb-6 leading-relaxed line-clamp-6">

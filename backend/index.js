@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import connectDB from "./config/db.js";
 import blogRoutes from "./routes/blogRoutes.js"; // 👈 import routes
 import productRoutes from './routes/productRoutes.js'
+import commentRoutes from './routes/commentRoutes.js'
 
 dotenv.config();
 
@@ -25,8 +26,11 @@ app.get("/", (req, res) => {
   res.send("hi");
 });
 
-app.use("/api/blogs", blogRoutes); // 👈 mount blog routes
+
 app.use("/api/products", productRoutes);
+app.use("/api/blogs", blogRoutes);             // handles blogs
+app.use("/api/blogs/:id/comments", commentRoutes); // handles comments
+
 
 
 // Start server

@@ -27,7 +27,7 @@ export default function CategoryPage() {
 
   return (
     <div className="max-w-8xl  mt-10 px-4">
-      <h1 className="text-4xl font-semibold mb-8 capitalize text-center mt-24 text-indigo-500 mb-20">{type} Blogs</h1>
+      <h1 className="text-4xl font-semibold mb-8 capitalize text-center mt-12 text-indigo-500 mb-12">{type} Blogs</h1>
 
       {blogs.length === 0 ? (
         <p className="text-center text-gray-500 text-lg">No blogs found in this category.</p>
@@ -49,7 +49,7 @@ export default function CategoryPage() {
               <p className="text-gray-600 mb-4">{blog.content.slice(0, 120)}...</p>
               <Link
                 to={`/blogs/${blog._id}`}
-                className="mt-auto inline-block text-indigo-500 hover:text-indigo-600 font-medium"
+                className="mt-auto inline-block text-indigo-500 font-medium hover:underline"
               >
                 Read more
               </Link>

@@ -9,11 +9,9 @@ import Layout from "./components/layout/Layout";
 import BlogDetails from "./pages/ui/BlogDetails";
 import CategoryPage from "./pages/ui/Category";
 import Show from "./pages/ui/Show";
-import Shop from "./pages/ui/Shop";
-import CreateProduct from './pages/shop/CreateProduct';
-import FetchProducts from './pages/shop/Fetch';
 import About from './pages/ui/About';
 import Home from "./pages/ui/Home";
+import Shop from '../src/pages/ui/Shop'
 
 const App = () => {
   return (
@@ -25,7 +23,7 @@ const App = () => {
           <Route path="/category/:type" element={<CategoryPage />} /> {/* category route */}
           <Route path="/blogs/:id" element={<BlogDetails />} /> {/* blog details */}
           <Route path='/show' element={<Show/>}/>
-          <Route path="/shop" element={<Shop/>}/>
+            <Route path='/shop' element={<Shop/>}/>
           <Route path="/about" element={<About/>}/>
         </Route>
 
@@ -33,11 +31,6 @@ const App = () => {
         <Route path="/read" element={<Read />} />
         <Route path="/create" element={<Create />} />
         <Route path="/edit/:id" element={<EditBlog />} />
-
-    
-
-           <Route path="/r" element={<FetchProducts />} />
-        <Route path="/c" element={<CreateProduct />} />
       </Routes>
     </Router>
   );

@@ -5,17 +5,21 @@ import {
   getBlogById,
   updateBlog,
   deleteBlog,
-  getBlogsByType
+  getBlogsByType,
+  searchBlogs,
 } from "../controllers/blogController.js";
 
 const router = express.Router();
 
-router.get("/", getBlogs);        // GET all blogs
-router.post("/", createBlog);     // POST create new blog
-router.get("/:id", getBlogById);  // GET single blog
-router.put("/:id", updateBlog);   // PUT update blog
-router.delete("/:id", deleteBlog); // DELETE blog
-router.get("/type/:type", getBlogsByType);  // ✅ GET blogs by type
+// ✅ Specific routes FIRST
+router.get("/search", searchBlogs);
+router.get("/type/:type", getBlogsByType);
 
+// ✅ Generic routes AFTER
+router.get("/", getBlogs);
+router.post("/", createBlog);
+router.get("/:id", getBlogById);
+router.put("/:id", updateBlog);
+router.delete("/:id", deleteBlog);
 
 export default router;
