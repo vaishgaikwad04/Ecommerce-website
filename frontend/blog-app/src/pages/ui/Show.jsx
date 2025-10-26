@@ -18,7 +18,7 @@ const Show = () => {
   return (
     <div className="bg-gray-100 py-16 min-h-screen">
       {/* Cover Page With Video Embed */}
-      <div className="relative mx-30  w-300 h-screen flex items-center justify-center">
+      <div className="relative mx-30  w-360 h-screen flex items-center justify-center">
         {/* Background Cover Image */}
         <img
           src="./cover.png"
@@ -26,14 +26,14 @@ const Show = () => {
           className="absolute inset-0 w-full h-auto object-cover"
         />
 
-        <div className="relative z-10 text-center text-white px-6 flex flex-col items-center">
+        <div className="relative z-10 text-center text-white px-6 flex flex-col  items-center">
 
 
           {/* Video Embed / Play Button */}
           {videoPlaying ? (
-            <div className="w-440 h-[90vh] mb-57 md:h-[130vh] mx-auto rounded-2xl overflow-hidden shadow-lg">
+            <div className="w-440 h-[90vh] mb-57 md:h-[130vh] mx-auto rounded-2xl  overflow-hidden shadow-lg">
               <iframe
-                className="w-300 mx-auto h-full "
+                className="w-360 mx-auto h-240 "
                 src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
                 frameBorder="0"
                 allow="autoplay; encrypted-media; picture-in-picture"
@@ -57,17 +57,17 @@ const Show = () => {
       </div>
 
       {/* Main Content Section */}
-      <div className=" max-w-8xl mx-14 md:px-18 px-8">
-        <div className="text-left mt-28 mb-8">
+      <div className=" max-w-8xl mx-20 md:px-24 px-8">
+        <div className="text-left mt-4 mb-8">
           <h2 className="text-5xl font-normal italic">Welcome to</h2>
           <h1 className="text-5xl pb-6 md:text-6xl font-semibold leading-tight "  style={{  color: "var(--color-dark-blue)" }}>
             THE HIM AND HER SHOW
           </h1>
         </div>
 
-        <div className="flex py-10 flex-col md:flex-row gap-10">
+        <div className="flex py-8 flex-col md:flex-row gap-10">
           {/* Text Content */}
-          <div className="md:w-1/2 mt-8 text-gray-700 text-lg space-y-10">
+          <div className="md:w-1/2  text-gray-700 text-lg space-y-10">
             <p>
               Lauryn Evarts Bosstick, the creator of The Skinny Confidential, a
               blog, book, podcast and YouTube channel. Lauryn helps women live
@@ -146,7 +146,7 @@ const Show = () => {
          </div>
 
       {/* Mark Consuelos Section */}
-      <div className="max-w-8xl mt-24 mx-12 bg-white shadow-lg overflow-hidden flex flex-col md:flex-row gap-12 p-6">
+      <div className="max-w-8xl mt-24 mx-30 bg-white shadow-lg overflow-hidden flex flex-col md:flex-row gap-4 p-6">
         <div className="md:w-[600px] flex-shrink-0">
           <img
             src="https://tscpodcast.com/wp-content/uploads/2025/09/LuAnn-de-Lesseps-887-768x768.png"
@@ -160,15 +160,15 @@ const Show = () => {
             LuAnn de Lesseps
 
           </h1>
-          <h3 className="text-xl  text-gray-700 mb-3">
-            Countess LuAnn de Lesseps Gets Real About RHONY, Enjoying Life Unapologetically, & Life As A Cabaret Star
-          </h3>
-          <p className="text-gray-600 text-xl py-4 leading-relaxed">
+      
+          <p className="text-gray-600 text-xl py-4  leading-relaxed">
             #886: Join us as we sit down with Mark Consuelos – actor & TV host, best known
             for his role on <em>All My Children</em> & as co-host of <em>Live with Kelly & Mark</em> alongside his
             wife, Kelly Ripa. In this episode, Mark gets real about what success means to
             him, how he & Kelly have…
           </p>
+                    <p className="text-gray-600 text-xl py-4  leading-relaxed">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto delectus sapiente incidunt vel numquam, cupiditate sed, doloribus officia unde quis enim et aspernatur ut! Recusandae ab magnam doloribus. Distinctio, deleniti.</p>
 
           <button
             className="mt-6 text-xl self-start hover:underline transition"

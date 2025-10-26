@@ -24,8 +24,8 @@ const Shop = () => {
       </div>
 
       {/* Blog Preview Section */}
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row gap-8 items-center">
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
           {/* Morning Routine */}
           <div className="flex-1 w-full">
             <img
@@ -57,9 +57,7 @@ const Shop = () => {
           </div>
         </div>
       </div>
-
-      {/* Fetch Section */}
-      <Fetch />
+<div className="mx-20"><Fetch/></div>
     </div>
   );
 };
