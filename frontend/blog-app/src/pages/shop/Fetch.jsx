@@ -15,7 +15,7 @@ export default function ProductList() {
   // Fetch products
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products");
+      const res = await axios.get("https://ecommerce-website-blog.onrender.com/api/products");
       setProducts(res.data);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -25,7 +25,7 @@ export default function ProductList() {
   // Delete product
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/products/${id}`);
+      await axios.delete(`https://ecommerce-website-blog.onrender.com/api/products/${id}`);
       fetchProducts();
     } catch (error) {
       console.error("Error deleting product:", error);
@@ -52,7 +52,7 @@ export default function ProductList() {
   // Save update
   const updateProduct = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/products/${id}`, editData);
+      await axios.put(`https://ecommerce-website-blog.onrender.com/api/products/${id}`, editData);
       setEditing(null);
       fetchProducts();
     } catch (error) {

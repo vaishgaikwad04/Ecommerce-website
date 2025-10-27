@@ -48,7 +48,7 @@ export default function Categories() {
 </h1>
 
 <Link to="/show">
-  <img className="mx-auto" src="2.PNG" alt="Show" />
+  <img className="mx-auto" src="https://image2url.com/images/1761480229763-7431eb96-f3a5-43c6-930f-952ae8355a7f.png" alt="Show" />
 </Link>
 
 

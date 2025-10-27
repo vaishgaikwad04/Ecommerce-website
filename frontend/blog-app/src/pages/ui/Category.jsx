@@ -10,7 +10,7 @@ export default function CategoryPage() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/blogs/type/${type}`);
+        const res = await axios.get(`https://ecommerce-website-blog.onrender.com/api/blogs/type/${type}`);
         setBlogs(res.data);
       } catch (err) {
         console.error("Error fetching blogs:", err);

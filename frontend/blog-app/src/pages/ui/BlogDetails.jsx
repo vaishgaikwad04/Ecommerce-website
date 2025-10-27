@@ -9,7 +9,7 @@ export default function BlogDetails() {
 
   // Fetch blog details
   useEffect(() => {
-    fetch(`/api/blogs/${id}`)
+    fetch(`https://ecommerce-website-blog.onrender.com/api/blogs/${id}`)
       .then((res) => res.json())
       .then((data) => setBlog(data))
       .catch((err) => console.error("Error fetching blog:", err));
@@ -17,7 +17,7 @@ export default function BlogDetails() {
 
   // Fetch comments for this blog
   useEffect(() => {
-    fetch(`/api/blogs/${id}/comments`)
+    fetch(`https://ecommerce-website-blog.onrender.com/api/blogs/${id}/comments`)
       .then((res) => res.json())
       .then((data) => setComments(data))
       .catch((err) => console.error("Error fetching comments:", err));
@@ -37,7 +37,7 @@ export default function BlogDetails() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`/api/blogs/${id}/comments`, {
+      const res = await fetch(`https://ecommerce-website-blog.onrender.com/api/blogs/${id}/comments`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

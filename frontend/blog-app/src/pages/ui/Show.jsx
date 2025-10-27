@@ -21,7 +21,7 @@ const Show = () => {
       <div className="relative mx-30  w-360 h-screen flex items-center justify-center">
         {/* Background Cover Image */}
         <img
-          src="./cover.png"
+          src="https://image2url.com/images/1761480270979-1c0aad73-de39-4eaa-a7d8-f4237f433092.png"
           alt="Cover"
           className="absolute inset-0 w-full h-auto object-cover"
         />
