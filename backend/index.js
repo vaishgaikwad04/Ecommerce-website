@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(express.json());          
 app.use(express.urlencoded({ extended: true })); 
-app.use(cors({   origin: "https://your-frontend.onrender.com", // your deployed frontend URL
+app.use(cors({   origin: "https://ecommerce-website-app-rexe.onrender.com", // your deployed frontend URL
 credentials: true })); // 👈 set frontend URL (Vite default is 5173)
 app.use(cookieParser());   
 
