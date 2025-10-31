@@ -27,7 +27,7 @@ export default function BlogList() {
     try {
       setLoading(true);
       setError("");
-      const res = await axios.get("https://ecommerce-website-blog.onrender.com/api/blogs");
+      const res = await axios.get("http://localhost:5000/api/blogs");
       setBlogs(res.data);
     } catch (err) {
       setError("Failed to load blogs");
@@ -45,7 +45,7 @@ export default function BlogList() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this blog?")) {
       try {
-        await axios.delete(`https://ecommerce-website-blog.onrender.com/api/blogs/${id}`);
+        await axios.delete(`http://localhost:5000/api/blogs/${id}`);
         setBlogs((prev) => prev.filter((blog) => blog._id !== id));
       } catch (err) {
         console.error(err);
@@ -143,11 +143,7 @@ export default function BlogList() {
         <main className="flex-1">
           {/* Filters row */}
           <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <h2 className="text-2xl font-bold">Hello, Admin</h2>
-              <p className="text-sm text-gray-500">Manage your posts at a glance</p>
-            </div>
-            <div>
+                      <div>
               <div className="flex items-center gap-2">
                 <select
                   value={typeFilter}

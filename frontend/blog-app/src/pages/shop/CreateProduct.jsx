@@ -18,7 +18,7 @@ export default function CreateProduct() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://ecommerce-website-blog.onrender.com/api/products", formData);
+      await axios.post("http://localhost:5000/api/products", formData);
       alert("Product added!");
     } catch (error) {
       console.error("Error adding product:", error);

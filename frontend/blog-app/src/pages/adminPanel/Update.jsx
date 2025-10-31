@@ -19,7 +19,7 @@ export default function EditBlog() {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const res = await axios.get(`https://ecommerce-website-blog.onrender.com/api/blogs/${id}`);
+        const res = await axios.get(`http://localhost:5000/api/blogs/${id}`);
         const blog = res.data;
 
         setTitle(blog.title);
@@ -77,7 +77,7 @@ export default function EditBlog() {
 
     try {
       setSubmitting(true);
-      await axios.put(`https://ecommerce-website-blog.onrender.com/api/blogs/${id}`, {
+      await axios.put(`http://localhost:5000/api/blogs/${id}`, {
         title,
         content,
         author,

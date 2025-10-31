@@ -14,7 +14,7 @@ const SearchToggle = () => {
 
     try {
       const res = await axios.get(
-        `https://ecommerce-website-blog.onrender.com/api/blogs/search?q=${query}`
+        `http://localhost:5000/api/blogs/search?q=${query}`
       );
       setResults(res.data);
     } catch (err) {

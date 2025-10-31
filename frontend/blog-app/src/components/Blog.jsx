@@ -10,7 +10,7 @@ export default function LimitedBlogs({ limit = 4 }) {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get("https://ecommerce-website-blog.onrender.com/api/blogs");
+        const res = await axios.get("https://localhost:5000/api/blogs");
         // Sort by creation date descending and take only 'limit' blogs
         const latestBlogs = res.data
           .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))

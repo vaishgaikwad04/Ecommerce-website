@@ -3,38 +3,44 @@ import cors from "cors";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import connectDB from "./config/db.js";
-import blogRoutes from "./routes/blogRoutes.js"; // 👈 import routes
-import productRoutes from './routes/productRoutes.js'
-import commentRoutes from './routes/commentRoutes.js'
+import blogRoutes from "./routes/blogRoutes.js";
+import productRoutes from "./routes/productRoutes.js";
+import commentRoutes from "./routes/commentRoutes.js";
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
-app.use(express.json());          
-app.use(express.urlencoded({ extended: true })); 
-app.use(cors({   origin: "https://ecommerce-website-app-rexe.onrender.com", // your deployed frontend URL
-credentials: true })); // 👈 set frontend URL (Vite default is 5173)
-app.use(cookieParser());   
+// ✅ CORS configuration
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173", // for local development (Vite)
+      "https://ecommerce-website-app-rexe.onrender.com", // your deployed frontend
+    ],
+    credentials: true, // allows sending cookies, auth headers, etc.
+  })
+);
 
-// DB connection
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
+
+// ✅ Connect to MongoDB
 connectDB();
 
-// Routes
+// ✅ Routes
 app.get("/", (req, res) => {
-  res.send("hi");
+  res.send("Server is running 🚀");
 });
 
-
 app.use("/api/products", productRoutes);
-app.use("/api/blogs", blogRoutes);             // handles blogs
-app.use("/api/blogs/:id/comments", commentRoutes); // handles comments
+app.use("/api/blogs", blogRoutes);
+app.use("/api/blogs/:id/comments", commentRoutes);
 
-
-
-// Start server
+// ✅ Start server
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`✅ Server running on port ${PORT}`);
 });
