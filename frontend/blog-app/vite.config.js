@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://ecommerce-website-app-rexe.onrender.com", // ✅ FIXED
+        target: "https://ecommerce-website-blog.onrender.com", // ✅ FIXED
         changeOrigin: true,
       },
     },
