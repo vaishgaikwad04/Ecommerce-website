@@ -35,7 +35,7 @@ export default function Create() {
     setError("");
 
     try {
-      const res = await axios.post("/blogs", {
+      const res = await axios.post("/api/blogs", {
         title,
         content,
         author,

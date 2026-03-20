@@ -27,8 +27,8 @@ export default function BlogList() {
     try {
       setLoading(true);
       setError("");
-      const res = await axios.get("/blogs");
-      setBlogs(res.data);
+      const res = await axios.get("/api/blogs");
+    setBlogs(Array.isArray(res.data) ? res.data : []);
     } catch (err) {
       setError("Failed to load blogs");
       console.error(err);
@@ -45,7 +45,7 @@ export default function BlogList() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this blog?")) {
       try {
-        await axios.delete(`/blogs/${id}`);
+        await axios.delete(`/api/blogs/${id}`);
         setBlogs((prev) => prev.filter((blog) => blog._id !== id));
       } catch (err) {
         console.error(err);

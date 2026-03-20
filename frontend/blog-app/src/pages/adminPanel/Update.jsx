@@ -19,7 +19,7 @@ export default function EditBlog() {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const res = await axios.get(`/blogs/${id}`);
+        const res = await axios.get(`/api/blogs/${id}`);
         const blog = res.data;
 
         setTitle(blog.title);

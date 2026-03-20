@@ -11,7 +11,7 @@ export default function CategoryPage() {
     const fetchBlogs = async () => {
       try {
         const res = await axios.get(
-          `/blogs/type/${type}`
+          `/api/blogs/type/${type}`
         );
         setBlogs(res.data);
       } catch (err) {

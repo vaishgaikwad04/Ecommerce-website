@@ -10,14 +10,14 @@ export default function BlogDetails() {
   const [form, setForm] = useState({ name: "", rating: 5, comment: "" });
 
   useEffect(() => {
-    fetch(`/blogs/${id}`)
+    fetch(`/api/blogs/${id}`)
       .then((res) => res.json())
       .then(setBlog)
       .catch(console.error);
   }, [id]);
 
   useEffect(() => {
-    fetch(`/blogs/${id}/comments`)
+    fetch(`/api/blogs/${id}/comments`)
       .then((res) => res.json())
       .then(setComments)
       .catch(console.error);
@@ -35,7 +35,7 @@ export default function BlogDetails() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch(`/blogs/${id}/comments`, {
+    const res = await fetch(`/api/blogs/${id}/comments`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
