@@ -13,6 +13,7 @@ export default function LimitedBlogs({ limit = 4 }) {
         const res = await axios.get("/api/blogs");
         // Sort by creation date descending and take only 'limit' blogs
         const latestBlogs = res.data
+       
           .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
           .slice(0, limit);
         setBlogs(latestBlogs);
