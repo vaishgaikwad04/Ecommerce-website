@@ -60,7 +60,7 @@ export default function LimitedBlogs({ limit = 4 }) {
             return (
               <div
                 key={blog._id}
-                className="bg-white rounded-3xl shadow-md overflow-hidden hover:shadow-lg transition"
+                className="bg-white rounded overflow-hidden hover:shadow-lg transition"
               >
                 {/* Image */}
                 {mainImage ? (
