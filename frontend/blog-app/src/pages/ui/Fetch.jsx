@@ -15,7 +15,7 @@ export default function Read() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get("/api/blogs");
+        const res = await axios.get("/blogs");
         setBlogs(res.data);
       } catch (err) {
         console.error(err);

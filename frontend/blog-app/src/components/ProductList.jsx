@@ -8,8 +8,9 @@ export default function ProductList() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("/api/products/get");
+        const res = await axios.get("/products/get");
        setProducts(res.data);
+       console.log(res.data)
       
       } catch (error) {
         console.error("Error fetching products:", error);

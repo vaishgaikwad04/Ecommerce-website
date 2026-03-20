@@ -9,7 +9,7 @@ export default function BlogList() {
   // Fetch blogs
   const fetchBlogs = async () => {
     try {
-      const res = await axios.get("/api/blogs");
+      const res = await axios.get("/blogs");
       setBlogs(res.data);
     } catch (err) {
       console.error(err);
@@ -24,7 +24,7 @@ export default function BlogList() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this blog?")) {
       try {
-        await axios.delete(`/api/blogs/${id}`);
+        await axios.delete(`/blogs/${id}`);
         // Refresh list after deletion
         setBlogs(blogs.filter((blog) => blog._id !== id));
       } catch (err) {

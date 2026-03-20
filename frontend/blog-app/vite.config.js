@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     proxy: {
-      "": {
+      "/api": {
         target: "https://ecommerce-website-blog.onrender.com", // ✅ FIXED
         changeOrigin: true,
       },

@@ -15,7 +15,7 @@ const SearchToggle = () => {
 
     try {
       const res = await axios.get(
-        `/api/blogs/search?q=${query}`
+        `/blogs/search?q=${query}`
       );
       setResults(res.data);
     } catch (err) {

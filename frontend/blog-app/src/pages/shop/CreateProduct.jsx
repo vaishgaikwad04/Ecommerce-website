@@ -18,7 +18,7 @@ export default function CreateProduct() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/api/products", formData);
+      await axios.post("/products", formData);
       alert("Product added!");
     } catch (error) {
       console.error("Error adding product:", error);
