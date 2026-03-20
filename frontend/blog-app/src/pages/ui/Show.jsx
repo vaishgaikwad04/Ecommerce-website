@@ -16,11 +16,11 @@ const Show = () => {
   const videoId = "zj4AP5pvqBg";
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className=" min-h-screen">
       {/* HERO */}
     {/* HERO */}
 <section className="relative max-w-7xl mx-auto px-4 py-20">
-  <div className="relative h-[70vh] rounded-3xl overflow-hidden shadow-xl">
+  <div className="relative h-[70vh] rounded-3xl overflow-hidden shadow">
     {/* Background Image */}
     <img
       src="https://image2url.com/images/1761480270979-1c0aad73-de39-4eaa-a7d8-f4237f433092.png"
@@ -89,16 +89,16 @@ const Show = () => {
           </div>
 
         <img
-  src="https://yt3.googleusercontent.com/mrHbgaTqzQmRcBOVOr19WVPtfBfy3Y89syLex3IikbmY1MHdy4CFvmx_d5o0B6RB9iJfYBd2sA=s900-c-k-c0x00ffffff-no-rj"
+  src="./couple.png"
   alt="Couple"
-  className="w-full h-[400px] md:h-[460px] lg:h-[500px] rounded-2xl object-cover shadow-lg"
+  className="w-full h-[400px] md:h-[460px] lg:h-[500px] rounded object-cover"
 />
 
         </div>
       </section>
 
       {/* SOCIALS */}
-      <section className="bg-white py-20">
+      <section className=" py-20">
         <h2 className="text-center text-4xl font-semibold mb-12">
           Our Socials
         </h2>
@@ -127,11 +127,11 @@ const Show = () => {
 
       {/* FEATURE EPISODE */}
       <section className="max-w-7xl mx-auto px-4 py-24">
-        <div className="bg-white rounded-3xl shadow-xl grid md:grid-cols-2 gap-12 p-10 items-center">
+        <div className=" rounded  grid md:grid-cols-2 gap-12 p-10 items-center">
           <img
             src="https://tscpodcast.com/wp-content/uploads/2025/09/LuAnn-de-Lesseps-887-768x768.png"
             alt="Guest"
-            className="rounded-xl w-full object-cover"
+            className="rounded w-full object-cover"
           />
 
           <div>

@@ -11,7 +11,7 @@ export default function CategoryPage() {
     const fetchBlogs = async () => {
       try {
         const res = await axios.get(
-          `https://ecommerce-website-blog.onrender.com/api/blogs/type/${type}`
+          `/api/blogs/type/${type}`
         );
         setBlogs(res.data);
       } catch (err) {
@@ -46,7 +46,7 @@ export default function CategoryPage() {
           {blogs.map((blog) => (
             <div
               key={blog._id}
-              className="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 flex flex-col overflow-hidden"
+              className="bg-white rounded-xl shadow  transition duration-300 flex flex-col overflow-hidden"
             >
               {blog.image?.[0] && (
                 <img

@@ -21,9 +21,9 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
         <div className="md:w-1/2 flex justify-center">
           <img
-            src="https://image2url.com/images/1761480297292-86443ebb-79e3-4caf-8a64-9eb2c96a03d8.png"
+            src="./her.png"
             alt="Lauryn Bosstick"
-            className="rounded-2xl shadow-lg w-full max-w-xl h-80 md:h-[480px] object-cover"
+            className=" w-full max-w-xl h-80 md:h-[480px] object-cover"
           />
         </div>
         <div className="md:w-1/2 mt-8 md:mt-0 space-y-4">
@@ -44,9 +44,9 @@ const About = () => {
       <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-8 md:gap-12">
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <img
-            src="https://image2url.com/images/1761480324019-348ab8be-f0e6-42f4-8511-54fff7c1ba26.png"
+            src="./him.png"
             alt="Michael Bosstick"
-            className="rounded-2xl shadow-lg w-full max-w-md md:max-w-lg h-80 md:h-[480px] object-cover"
+            className="w-full max-w-xl h-80 md:h-[480px] object-cover"
           />
         </div>
         <div className="md:w-1/2 mt-8 md:mt-0 space-y-4">

@@ -10,7 +10,7 @@ const Shop = () => {
       <section className="max-w-7xl mx-auto px-4 mt-10">
         <div className="h-[60vh] rounded-2xl overflow-hidden shadow-lg">
           <video
-            src="https://cdn.shopify.com/videos/c/o/v/2055c28dfa064e69b03cdc32f91cae65.mp4"
+            src="http://cdn.shopify.com/videos/c/o/v/2055c28dfa064e69b03cdc32f91cae65.mp4"
             autoPlay
             loop
             muted

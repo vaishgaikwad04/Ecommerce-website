@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="mt-12" style={{ backgroundColor: "var(--gig-pop)", color: "var(--color-dark-blue)" }}>
       {/* Title */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-semibold text-center py-12">
+      <h1 className="text-lg md:text-xl lg:text-2xl text-white font-semibold text-center py-12">
         The Skinny Confidential
       </h1>
 
@@ -59,19 +59,19 @@ export default function Footer() {
 
         {/* Subscribe + Social */}
         <div className="flex flex-col items-center md:items-end w-full md:w-1/3 mt-6 md:mt-0">
-          <h2 className="text-lg md:text-xl font-semibold mb-3">Get the Skinny</h2>
+          <h2 className="text-sm md:text-lg font-semibold mb-3">Get the Skinny</h2>
           <div className="flex w-full bg-white max-w-xs rounded-full overflow-hidden shadow-md">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-3 py-2 text-gray-700 text-sm md:text-base placeholder-gray-400 outline-none"
+              className="flex-1 px-3 py-2 text-gray-700 text-sm md:text-sm placeholder-gray-400 outline-none"
             />
             <button className=" text-white px-4 md:px-6 py-2 md:py-3 font-bold hover:scale-105 transition-transform" style={{  backgroundColor: "var(--color-dark-blue)" }}>
               →
             </button>
           </div>
 
-          <div className="flex space-x-3 md:space-x-5 mt-6 md:mt-8 text-2xl md:text-3xl">
+          <div className="flex space-x-3 md:space-x-5 mt-6 md:mt-8 text-lg md:text-xl">
             <a href="#" className="hover:text-pink-300 transition-colors"><FaLinkedin /></a>
             <a href="#" className="hover:text-pink-300 transition-colors"><FaInstagram /></a>
             <a href="#" className="hover:text-pink-300 transition-colors"><FaFacebookF /></a>
@@ -83,12 +83,12 @@ export default function Footer() {
 
       {/* Bottom Section */}
       <div className="text-center py-4 md:py-6 border-t border-white/30">
-        <h3 className="text-lg md:text-xl mb-2 md:mb-3 font-semibold">Follow along</h3>
+        <h3 className="text-sm md:text-lg mb-2 md:mb-3 font-semibold">Follow along</h3>
         <div className="flex justify-center flex-wrap gap-2 md:gap-3 mb-3 md:mb-4">
           {["Blog", "Book", "Podcast", "Show"].map((item) => (
             <button
               key={item}
-              className="w-24 md:w-28 bg-white text-black rounded-full px-3 py-2 md:px-4 md:py-2 shadow hover:text-pink-400 transition-colors "
+              className="w-18 md:w-24 bg-white text-black rounded-full px-3 py-2 md:px-4 md:py-2 shadow hover:text-pink-400 transition-colors text-sm "
             >
               {item}
             </button>

@@ -12,7 +12,7 @@ export default function Header() {
   const categories = ["Tech", "Travel", "Lifestyle", "Education", "Other"];
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-white/90 shadow-md">
+    <header className=" backdrop-blur-md bg-white/90">
       {/* Mobile Overlay */}
       {mobileMenuOpen && (
         <div
@@ -26,13 +26,13 @@ export default function Header() {
         <div className="flex items-center space-x-6 md:space-x-10">
           <Link
             to="/"
-            className="text-gray-800 text-lg font-semibold hover:text-indigo-500 transition-colors"
+            className="text-gray-800 text-sm font-semibold hover:text-indigo-500 transition-colors"
           >
             Home
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-6 md:space-x-10 items-center text-gray-700 text-lg font-medium">
+          <nav className="hidden md:flex space-x-6 md:space-x-10 items-center text-gray-700 text-sm font-medium">
             {/* Blog Dropdown */}
             <div
               className="relative"
@@ -84,7 +84,7 @@ export default function Header() {
         </div>
       
         {/* Right: Social Icons & Hamburger */}
-        <div className="flex items-center ml-auto space-x-5 text-gray-600 text-xl">
+        <div className="flex items-center ml-auto space-x-5 text-gray-600 text-lg">
           {/* Desktop Social Icons */}
           <div className="hidden md:flex space-x-5">
             <a

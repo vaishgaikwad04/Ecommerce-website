@@ -15,7 +15,7 @@ const SearchToggle = () => {
 
     try {
       const res = await axios.get(
-        `https://ecommerce-website-blog.onrender.com//api/blogs/search?q=${query}`
+        `/api/blogs/search?q=${query}`
       );
       setResults(res.data);
     } catch (err) {
@@ -37,7 +37,7 @@ const SearchToggle = () => {
         <nav className="flex items-center gap-7 text-gray-700 font-medium">
           <Link
             to="/show"
-            className="text-lg font-semibold text-gray-600 hover:text-indigo-700 transition"
+            className="text-sm font-semibold text-gray-600 hover:text-indigo-700 transition"
           >
             Show
           </Link>
@@ -65,7 +65,7 @@ const SearchToggle = () => {
           className={`flex items-center rounded-full border border-gray-300 bg-white transition-all duration-500 ease-in-out
             ${
               isOpen
-                ? "w-[18rem] sm:w-[22rem] md:w-[38rem] opacity-100 px-3 py-1.5 ml-2"
+                ? "w-[18rem] sm:w-[22rem] md:w-[38rem] opacity-100 px-1 py-1.1 ml-4"
                 : "w-0 opacity-0 overflow-hidden"
             }
           `}
@@ -75,7 +75,7 @@ const SearchToggle = () => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search blog titles or categories..."
-            className="flex-1 px-3 py-2 bg-transparent text-gray-800 placeholder-gray-400 text-sm sm:text-base focus:outline-none"
+            className="flex-1 px-3 py-2 bg-transparent text-gray-800 placeholder-gray-400 text-sm focus:outline-none"
             autoFocus
           />
 
@@ -85,7 +85,7 @@ const SearchToggle = () => {
             onClick={handleClose}
             className="mx-1 text-gray-500 hover:text-red-500 transition"
           >
-            <IoClose size={20} />
+            <IoClose size={16} />
           </button>
 
           <button
@@ -99,8 +99,8 @@ const SearchToggle = () => {
 
       {/* ================= SEARCH RESULTS ================= */}
       {results.length > 0 && (
-        <div className="mt-4 w-full max-w-3xl bg-white mx-auto shadow-md rounded-lg p-4">
-          <h3 className="text-lg font-semibold mb-3 text-gray-700">
+        <div className="mt-4 w-full max-w-3xl bg-white  rounded p-4 ml-70">
+          <h3 className="text-sm font-semibold mb-3 text-gray-900">
             Blog Results
           </h3>
 
@@ -108,10 +108,10 @@ const SearchToggle = () => {
             {results.map((blog) => (
               <li
                 key={blog._id}
-                className="border-b pb-2 hover:text-indigo-700 transition"
+                className="border-b border-gray-100 pb-2 hover:text-indigo-700 transition"
               >
                 <Link to={`/blogs/${blog._id}`}>
-                  <h4 className="font-medium text-gray-800">
+                  <h4 className=" text-gray-800 text-sm hover:text-gray-900">
                     {blog.title}
                   </h4>
                   <p className="text-sm text-gray-500">

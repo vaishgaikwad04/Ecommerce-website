@@ -9,7 +9,7 @@ export default function BlogList() {
   // Fetch blogs
   const fetchBlogs = async () => {
     try {
-      const res = await axios.get("https://ecommerce-website-blog.onrender.com/api/blogs");
+      const res = await axios.get("/api/blogs");
       setBlogs(res.data);
     } catch (err) {
       console.error(err);
@@ -24,7 +24,7 @@ export default function BlogList() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this blog?")) {
       try {
-        await axios.delete(`https://ecommerce-website-blog.onrender.com/api/blogs/${id}`);
+        await axios.delete(`/api/blogs/${id}`);
         // Refresh list after deletion
         setBlogs(blogs.filter((blog) => blog._id !== id));
       } catch (err) {
@@ -34,7 +34,7 @@ export default function BlogList() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-6">
+    <div className="min-h-screen  text-white p-6">
       <h1 className="text-3xl font-bold mb-6">All Blogs</h1>
       <Link to="/create" className="underline mb-4 block">
         + Create Blog

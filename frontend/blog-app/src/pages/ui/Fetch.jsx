@@ -15,7 +15,7 @@ export default function Read() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get("https://ecommerce-website-blog.onrender.com/api/blogs");
+        const res = await axios.get("/api/blogs");
         setBlogs(res.data);
       } catch (err) {
         console.error(err);
@@ -36,7 +36,7 @@ export default function Read() {
   }
 
   return (
-    <div className="px-20 py-16 bg-[#F9F6F2] min-h-screen">
+    <div className="px-20 py-16  min-h-screen">
       {/* Heading */}
       <h1
         className="mb-10 text-left mx-8 mt-6 font-bold text-4xl tracking-wide"
@@ -66,7 +66,7 @@ export default function Read() {
 
             return (
               <SwiperSlide key={blog._id}>
-                <div className="flex bg-white rounded-3xl mt-10 shadow-md overflow-hidden w-full h-[450px]">
+                <div className="flex  rounded mt-10 shadow overflow-hidden w-full h-[450px]">
                   {/* Image */}
                   <div className="w-1/2 h-full">
                     {mainImage ? (

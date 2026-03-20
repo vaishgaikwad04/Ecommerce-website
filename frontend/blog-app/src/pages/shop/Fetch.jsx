@@ -15,17 +15,17 @@ export default function ProductList() {
   // Fetch products
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("https://ecommerce-website-blog.onrender.com/api/products");
+      const res = await axios.get("/api/products/get");
       setProducts(res.data);
     } catch (error) {
       console.error("Error fetching products:", error);
     }
   };
 
-  // Delete product
+  /// Delete product
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`https://ecommerce-website-blog.onrender.com/api/products/${id}`);
+      await axios.delete(`/api/products/${id}`);
       fetchProducts();
     } catch (error) {
       console.error("Error deleting product:", error);
@@ -52,7 +52,7 @@ export default function ProductList() {
   // Save update
   const updateProduct = async (id) => {
     try {
-      await axios.put(`https://ecommerce-website-blog.onrender.com/api/products/${id}`, editData);
+      await axios.put(`/api/products/${id}`, editData);
       setEditing(null);
       fetchProducts();
     } catch (error) {
@@ -174,3 +174,4 @@ export default function ProductList() {
     </div>
   );
 }
+`

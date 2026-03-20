@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
-const API = "https://ecommerce-website-blog.onrender.com";
+
 
 export default function BlogDetails() {
   const { id } = useParams();
@@ -10,14 +10,14 @@ export default function BlogDetails() {
   const [form, setForm] = useState({ name: "", rating: 5, comment: "" });
 
   useEffect(() => {
-    fetch(`${API}/api/blogs/${id}`)
+    fetch(`http://localhost:5000/api/blogs/${id}`)
       .then((res) => res.json())
       .then(setBlog)
       .catch(console.error);
   }, [id]);
 
   useEffect(() => {
-    fetch(`${API}/api/blogs/${id}/comments`)
+    fetch(`/api/blogs/${id}/comments`)
       .then((res) => res.json())
       .then(setComments)
       .catch(console.error);
@@ -35,7 +35,7 @@ export default function BlogDetails() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch(`${API}/api/blogs/${id}/comments`, {
+    const res = await fetch(`/api/blogs/${id}/comments`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
@@ -49,7 +49,7 @@ export default function BlogDetails() {
   };
 
   return (
-    <div className="bg-[#fdf8f5] min-h-screen">
+    <div className="min-h-screen">
       {/* HERO */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6 md:px-16 py-16">
         <div>
@@ -104,7 +104,7 @@ export default function BlogDetails() {
 
           <form
             onSubmit={handleSubmit}
-            className="bg-white p-6 rounded-xl shadow mb-10"
+            className=" p-6 rounded  mb-10"
           >
             <input
               placeholder="Your name"
@@ -133,7 +133,7 @@ export default function BlogDetails() {
             comments.map((r, i) => (
               <div
                 key={i}
-                className="bg-white p-5 mb-4 rounded-xl shadow"
+                className="bg-white p-5 mb-4 border-b border-gray-200"
               >
                 <p className="font-semibold">{r.name}</p>
                 <p className="text-yellow-500 text-sm">
