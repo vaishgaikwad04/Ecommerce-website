@@ -10,9 +10,9 @@ import {
 const router = express.Router();
 
 // CRUD Routes
-router.get("/", getProducts);        // Read all
-router.get("/:id", getProductById);  // Read one
-router.post("/", createProduct);     // Create
+router.post("/", createProduct);    
+router.get("/get", getProducts);        // Read all
+router.get("/:id", getProductById);  // Read one // Create
 router.put("/:id", updateProduct);   // Update
 router.delete("/:id", deleteProduct);// Delete
 
