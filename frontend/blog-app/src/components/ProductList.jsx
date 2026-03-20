@@ -9,7 +9,7 @@ export default function ProductList() {
     const fetchProducts = async () => {
       try {
         const res = await axios.get("/products/get");
-       setProducts(res.data);
+       setProducts(Array.isArray(res.data) ? res.data : []);
        console.log(res.data)
       
       } catch (error) {

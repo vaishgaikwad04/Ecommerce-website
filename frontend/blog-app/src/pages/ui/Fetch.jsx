@@ -16,7 +16,7 @@ export default function Read() {
     const fetchBlogs = async () => {
       try {
         const res = await axios.get("/api/blogs");
-        setBlogs(res.data);
+        setBlogs(Array.isArray(res.data) ? res.data : []);
       } catch (err) {
         console.error(err);
         setError("Failed to fetch blogs");
