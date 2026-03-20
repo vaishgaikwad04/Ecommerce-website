@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 5000;
 app.use(
   cors({
     origin: [
-      "http://localhost:5173"    ],
+      "https://ecommerce-website-app-rexe.onrender.com"    ],
     credentials: true, // allows sending cookies, auth headers, etc.
   })
 );
